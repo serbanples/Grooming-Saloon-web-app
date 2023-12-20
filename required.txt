@@ -2,3 +2,4 @@ flask
 flask-sqlalchemy
 Flask-Login
 Flask-Migrate
+python-dotenv
