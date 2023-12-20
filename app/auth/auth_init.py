@@ -3,4 +3,4 @@ from flask import Blueprint
 
 auth = Blueprint('auth', __name__)
 
-from app.auth import auth  # Import auth module
+from app.auth.auth_init import auth  # Import auth module

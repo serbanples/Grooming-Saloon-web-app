@@ -3,4 +3,4 @@ from flask import Blueprint
 
 main = Blueprint('main', __name__)
 
-from app.routes import main  # Import main module
+from app.routes.routes_init import main  # Import main module
