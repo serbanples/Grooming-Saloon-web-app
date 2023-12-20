@@ -2,8 +2,7 @@
 from flask import render_template
 from flask import Blueprint
 from flask_login import login_manager
-
-from app.routes import main  # Import my_blueprint from __init__.py
+from app.routes.routes_init import main  # Import my_blueprint from __init__.py
 
 login_manager.login_view = 'auth.login'  # Set the login view for login_required
 

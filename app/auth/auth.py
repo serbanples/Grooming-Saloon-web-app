@@ -5,7 +5,7 @@ from app import db, login_manager
 from app.models import User
 import re
 
-from app.auth import auth  # Import auth_bp from __init__.py
+from app.auth.auth_init import auth  # Import auth_bp from __init__.py
 
 @login_manager.user_loader
 def load_user(user_id):
