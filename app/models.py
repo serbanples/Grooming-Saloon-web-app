@@ -5,11 +5,11 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
-    firstName = db.Column(db.String(20), nullable=False)
-    lastName = db.Column(db.String(20), nullable=False)
+    first_name = db.Column(db.String(20), nullable=False)
+    last_name = db.Column(db.String(20), nullable=False)
     password = db.Column(db.String(60), nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
-    phoneNumber = db.Column(db.String(20), nullable=False)
+    phone_number = db.Column(db.String(20), nullable=False)
     is_admin = db.Column(db.Boolean, default=False)  # New field for admin status
 
     def set_password(self, password):
