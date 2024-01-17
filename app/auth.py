@@ -1,11 +1,13 @@
 # repo/app/auth/auth.py
 from flask import render_template, redirect, url_for, flash, request
 from flask_login import login_user, login_required, current_user, logout_user
-from app import db, login_manager
-from app.models import User
+from . import db, login_manager
+from .models import User
 import re
 
-from app.auth.auth_init import auth  # Import auth_bp from __init__.py
+from flask import Blueprint
+
+auth = Blueprint('auth', __name__)
 
 @login_manager.user_loader
 def load_user(user_id):

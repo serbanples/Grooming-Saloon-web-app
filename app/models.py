@@ -1,6 +1,6 @@
 #repo/app/models.py
 from flask_login import UserMixin
-from app import db  # Import db instance from app.py
+from . import db  # Import db instance from app.py
 from werkzeug.security import generate_password_hash, check_password_hash
 
 class User(db.Model, UserMixin):

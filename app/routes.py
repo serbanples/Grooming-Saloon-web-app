@@ -1,9 +1,9 @@
-#repo/app/routes/main.py
+#repo/app/routes/routes.py
 from flask import render_template
 from flask import Blueprint
 from flask_login import login_manager
-from app.routes.routes_init import main  # Import my_blueprint from __init__.py
 
+main = Blueprint('main', __name__)
 login_manager.login_view = 'auth.login'  # Set the login view for login_required
 
 @main.route('/')
