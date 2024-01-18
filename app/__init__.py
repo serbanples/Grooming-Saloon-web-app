@@ -38,6 +38,12 @@ def create_app():
     from .routes import main as main_blueprint
     app.register_blueprint(main_blueprint)
 
+    from .salon_management import salon as salon_blueprint
+    app.register_blueprint(salon_blueprint)
+
+    from .appointment_management import appointment as appointment_blueprint
+    app.register_blueprint(appointment_blueprint)
+
     return app
 
 
