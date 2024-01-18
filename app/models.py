@@ -27,3 +27,8 @@ class Salon(db.Model):
 class Appointment(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     date = db.Column(db.DateTime, nullable=False)
+    client_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    salon_id = db.Column(db.Integer, db.ForeignKey('salon.id'), nullable=False)
+
+    client = db.relationship('User', backref=db.backref('appointments', lazy=True))
+    salon = db.relationship('Salon', backref=db.backref('appointments', lazy=True))
